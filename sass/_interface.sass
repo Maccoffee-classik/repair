@@ -1,5 +1,7 @@
+* 
+    box-sizing: border-box
 body
-    font-family: sans-serif
+   font-family: 'Museo Sans Light', sans-serif 
 img
     max-width: 100%
 .container
@@ -21,8 +23,32 @@ img
             font-weight: 400
             padding: 14px 26px    
 .button
+    font-family:  'Museo Sans Bold'   
     border-radius: 10px
     background-color: $main-color
     border: none
     padding: 19px 30px
+    &:hover
+        background-color: lighten($main-color,10% )
+        cursor: pointer
+.section
+    padding: 90px 0     
+    &-title
+        font-size: 24px
+        font-family:  'Museo Sans Light'  
+        font-weight: 300
+    &-subtitle
+        font-size: 16px
+        display: inline-block
+.input
+    border-radius: 10px
+    border: 1px solid $border-input
+    padding: 20px 26px 
+    font-size: 15px
+    font-weight: 300
+    line-height: 24px 
+    font-family:  'Museo Sans Light'
+    outline: none
 
+    
+      

@@ -1,5 +1,11 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', sans-serif;
 }
 
 img {
@@ -33,12 +39,45 @@ img {
 }
 
 .button {
+  font-family: 'Museo Sans Bold';
   border-radius: 10px;
   background-color: #ffd200;
   border: none;
   padding: 19px 30px;
 }
 
+.button:hover {
+  background-color: #ffdb33;
+  cursor: pointer;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-family: 'Museo Sans Light';
+  font-weight: 300;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  display: inline-block;
+}
+
+.input {
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  padding: 20px 26px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  font-family: 'Museo Sans Light';
+  outline: none;
+}
+
+/*Импорт стилей шапки*/
 .navbar {
   padding: 8px 0;
 }
@@ -84,9 +123,10 @@ img {
   text-decoration: none;
   color: #333333;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   margin-top: 10px;
   display: inline-block;
+  font-family: 'Museo Sans Bold';
 }
 
 @media (max-width: 768px) {
@@ -102,6 +142,7 @@ img {
   }
 }
 
+/*Импорт стилей главного экрана*/
 .hero {
   padding: 50px 0;
   background-color: #f5f5f5;
@@ -114,16 +155,17 @@ img {
 }
 
 .hero-text {
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  padding-right: 120px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-right: 100px;
 }
 
 .hero-text__title {
   font-size: 41px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 55px;
   margin-bottom: 20px;
+  font-family: 'Museo Sans Bold';
 }
 
 .hero-text__subtitle {
@@ -210,6 +252,131 @@ img {
   }
   .hero-list__item {
     margin-bottom: 20px;
+  }
+}
+
+/*импорт шривтов*/
+@font-face {
+  font-family: 'Museo Sans Light';
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Bold';
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Импорт offer*/
+.offer {
+  background: url(../img/offer/offer_bg.png) no-repeat;
+  background-position: center right;
+  background-size: contain;
+  padding: 84px 0px 92px 0px;
+  position: relative;
+}
+
+.offer::before {
+  content: '';
+  background-color: #ffffff;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.offer-block {
+  width: 50%;
+  padding-right: 90px;
+  position: relative;
+}
+
+.offer__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+  font-family: 'Museo Sans Bold';
+  max-width: 360px;
+  margin-bottom: 24px;
+}
+
+.offer__subtitle {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 250px;
+  margin-bottom: 30px;
+}
+
+.offer__input {
+  margin-bottom: 30px;
+  width: 240px;
+}
+
+.offer__input:first-child {
+  margin-right: 10px;
+}
+
+.offer__button {
+  width: 100%;
+  min-height: 70px;
+  margin-bottom: 30px;
+}
+
+.offer__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.offer__text {
+  display: block;
+}
+
+.offer__number {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .offer {
+    background-size: cover;
+  }
+  .offer__input {
+    width: 100%;
+  }
+  .offer__contacts {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .offer__contacts:first-child {
+    margin-bottom: 27px;
+  }
+  .offer__text {
+    margin-bottom: 27px;
+  }
+  .offer__text, .offer__number {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer {
+    background: #ffffff;
+  }
+  .offer-block {
+    width: 100%;
+    padding-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
