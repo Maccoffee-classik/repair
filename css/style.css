@@ -1,7 +1,6 @@
 @charset "UTF-8";
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -57,8 +56,10 @@ img {
 
 .section-title {
   font-size: 24px;
-  font-family: 'Museo Sans Light';
   font-weight: 300;
+  text-align: center;
+  font-family: 'Museo Sans Bold';
+  padding-bottom: 60px;
 }
 
 .section-subtitle {
@@ -77,33 +78,25 @@ img {
   outline: none;
 }
 
+.arrow_left:hover, .arrow_right:hover {
+  cursor: pointer;
+}
+
 /*Импорт стилей шапки*/
 .navbar {
   padding: 8px 0;
 }
 
 .navbar-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   text-align: right;
 }
 
@@ -149,14 +142,11 @@ img {
 }
 
 .hero-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .hero-text {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  flex-basis: 50%;
   padding-right: 100px;
 }
 
@@ -183,13 +173,9 @@ img {
 
 .hero-list__item {
   margin-bottom: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .hero-list__text {
@@ -205,26 +191,16 @@ img {
   width: 40px;
   height: 40px;
   border: 2px solid #ffd200;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   border-radius: 50%;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 @media (max-width: 1200px) {
   .hero-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .hero-list {
     margin-bottom: 30px;
@@ -301,9 +277,10 @@ img {
   font-size: 24px;
   font-weight: 400;
   line-height: 35px;
-  font-family: 'Museo Sans Bold';
+  padding-bottom: 0;
   max-width: 360px;
   margin-bottom: 24px;
+  text-align: left;
 }
 
 .offer__subtitle {
@@ -330,12 +307,8 @@ img {
 }
 
 .offer__contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .offer__text {
@@ -354,8 +327,7 @@ img {
     width: 100%;
   }
   .offer__contacts {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .offer__contacts:first-child {
     margin-bottom: 27px;
@@ -378,5 +350,61 @@ img {
     width: 100%;
     padding-right: 0;
   }
+}
+
+/*Импорт портфолио там где слайдер*/
+.portfolio {
+  background: #f5f5f5 url(../img/portfolio/portfolio-pattern.png) repeat-y;
+  background-size: 50%;
+}
+
+.portfolio_title {
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.portfolio_arrow {
+  padding: 68px 0 0 0;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  max-width: 120px;
+}
+
+.slider-image {
+  margin: auto;
+}
+
+/*Импорт модальное окно*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal_active {
+  display: flex;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  width: 90%;
+  min-width: 200px;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */
